@@ -1,0 +1,11 @@
+<div class="card">
+  <img src="{{product.image}}" class="card-img-top" alt="..." style="max-height: 200px;">
+  <div class="card-body">
+    <h5 class="card-title">{{product.title}}</h5>
+    <p class="card-text">{{product.description |stringSlice:30}}
+    </p>
+    <p class="card-text">{{product.price |currency:"USD"}}
+    </p>
+    <button class="btn btn-primary" (click)="getProductId(product.id)">Add to favorite</button>
+  </div>
+</div>

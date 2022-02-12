@@ -1,0 +1,13 @@
+<app-favorite-product>
+
+</app-favorite-product>
+<div class="row">
+  <div class="col-md-8">
+
+    <app-product-card [product]="product" *ngFor="let product of products" (favoriteProduct)="addToFaveList($event)">
+
+    </app-product-card>
+
+  </div>
+
+</div>

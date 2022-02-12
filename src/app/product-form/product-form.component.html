@@ -1,0 +1,28 @@
+<div class="container">
+  <form [formGroup]="addProductForm" (submit)="onSubmit()">
+    <div class="form-group col-6">
+      <label for="">Product Name</label>
+      <input class="form-control" type="text" formControlName="productName">
+      <span class="text-danger" [hidden]="productName.valid || productName.pristine">Invalid Name</span>
+    </div>
+    <div class="form-group col-6">
+      <label for="">product Description</label>
+      <input class="form-control" type="text" formControlName="productDescription">
+      <span class="text-danger" [hidden]="productDescription.valid || productDescription.pristine">Invalid
+        Description</span>
+    </div>
+    <div class="form-group col-6">
+      <label for="">product Price</label>
+      <input class="form-control" type="text" formControlName="productPrice">
+      <span class="text-danger" [hidden]="productPrice.valid || productPrice.pristine">Invalid Price</span>
+    </div>
+    <div class="form-group col-6">
+      <label for="">product Image</label>
+      <input class="form-control" type="text" formControlName="productImage">
+      <span class="text-danger" [hidden]="productImage.valid || productImage.pristine">Invalid Image</span>
+    </div>
+    <div class="mt-2">
+      <input [disabled]="addProductForm.invalid" class="btn btn-info" type="submit" value="Add Product">
+    </div>
+  </form>
+</div>
